@@ -1,0 +1,70 @@
+/* ==========================================================================
+   استایل پایه‌ی سراسری پروژه. متغیرهای رنگ اینجا تعریف می‌شوند تا هر
+   کامپوننت به‌جای هاردکود رنگ، از var(--color-x) استفاده کند.
+   ========================================================================== */
+
+:root {
+  --color-bg: #f4f5f7;
+  --color-surface: #ffffff;
+  --color-border: #e4e7ec;
+  --color-text: #1f2430;
+  --color-text-muted: #6b7280;
+  --color-text-subtle: #9ca3af;
+  --color-primary: #5b5fef;
+  --color-primary-hover: #4a4ee0;
+  --color-danger: #e0554f;
+  --color-danger-bg: #feecec;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 28px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Vazirmatn', 'Tahoma', 'Segoe UI', sans-serif;
+  direction: rtl;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* برای مرورگرهایی که فونت محلی Vazirmatn نصب دارند از آن استفاده می‌شود؛
+   در غیر این صورت روی Tahoma/Segoe UI برمی‌گردد. نصب وب‌فونت خارجی
+   عمداً انجام نشده تا وابستگی شبکه‌ی اضافه نداشته باشیم. */
+@font-face {
+  font-family: 'Vazirmatn';
+  src: local('Vazirmatn');
+  font-display: swap;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
